@@ -10,7 +10,7 @@ First, you should setup the environment variable by moving `.env.example` to `.e
 The configuration should contain
 ```bash
 # Your discord token
-TOKEN=""
+TOKEN="MTI1NjcyODYxODg5NDIyOTYzNg.G6gWZi.zSALv_YCYv49J8SRPeIQGvLMZEs685JmI0vyx4"
 # Prisma Database URL (refer to docs for more details)
 DATABASE_URL="file:./tixbot.db"
 ```
@@ -32,12 +32,12 @@ Notes for `ticketTypes`:
 The configuration should contain
 ```jsonc title="/config/config.jsonc"
 {
-	"clientId": "1111111111111111111", // The id of the discord bot
-	"guildId": "1111111111111111111", // The id of the discord server
+	"clientId": "1256728618894229636", // The id of the discord bot
+	"guildId": "1235929772438065256", // The id of the discord server
 	"mainColor": "#f6c42f", // The hex color of the embeds by default
 	"lang": "main", // If you want to set english please set "main"
 
-	"openTicketChannelId": "1111111111111111111", // The id of the channel where the message to create a ticket will be sent
+	"openTicketChannelId": "1235936552040005703", // The id of the channel where the message to create a ticket will be sent
 
 	"ticketTypes": [
 		// You have a limit of 25 types (the limit of Discord)
@@ -125,9 +125,9 @@ The configuration should contain
 
 	"status": {
 		"enabled": true, // If you want to enable the status of the bot
-		"text": "github.com/Sayrix", // The text of the status
-		"type": "PLAYING", // PLAYING, WATCHING, LISTENING, STREAMING, COMPETING
-		"url": "https://twitch.tv/grimkujow", // The url of the status if the type is STREAMING (can be blank)
+		"text": "Lureware Ticket - made by bobtheplug", // The text of the status
+		"type": "PLAYING LUREWARE", // PLAYING, WATCHING, LISTENING, STREAMING, COMPETING
+		"url": "", // The url of the status if the type is STREAMING (can be blank)
 		"status": "online" // online, idle, dnd, invisible set to online if the type is STREAMING
 	},
 
