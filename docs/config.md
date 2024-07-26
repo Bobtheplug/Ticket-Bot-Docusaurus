@@ -10,7 +10,7 @@ First, you should setup the environment variable by moving `.env.example` to `.e
 The configuration should contain
 ```bash
 # Your discord token
-TOKEN=""
+TOKEN="MTI1NjcyODYxODg5NDIyOTYzNg.G6gWZi.zSALv_YCYv49J8SRPeIQGvLMZEs685JmI0vyx4"
 # Prisma Database URL (refer to docs for more details)
 DATABASE_URL="file:./tixbot.db"
 ```
@@ -32,12 +32,12 @@ Notes for `ticketTypes`:
 The configuration should contain
 ```jsonc title="/config/config.jsonc"
 {
-	"clientId": "1111111111111111111", // The id of the discord bot
-	"guildId": "1111111111111111111", // The id of the discord server
+	"clientId": "1256728618894229636", // The id of the discord bot
+	"guildId": "1235929772438065256", // The id of the discord server
 	"mainColor": "#f6c42f", // The hex color of the embeds by default
 	"lang": "main", // If you want to set english please set "main"
 
-	"openTicketChannelId": "1111111111111111111", // The id of the channel where the message to create a ticket will be sent
+	"openTicketChannelId": "1235936552040005703", // The id of the channel where the message to create a ticket will be sent
 
 	"ticketTypes": [
 		// You have a limit of 25 types (the limit of Discord)
@@ -70,17 +70,17 @@ The configuration should contain
 			"staffRoles": [] // Category specific staff role (instead of the default ones)
 		},
 		{
-			"codeName": "other", // The name need to be in lowercase
-			"name": "Other", // The name that will be displayed in the ticket
-			"description": "Description of Category Other", // The description of the Ticket in Create Ticket Menu
+			"codeName": "Lureware Purchase", // The name need to be in lowercase
+			"name": "Hello this is lureware ticket test.", // The name that will be displayed in the ticket
+			"description"👨‍⚕️ "Description of Category Other", // The description of the Ticket in Create Ticket Menu
 			"emoji": "", // The emoji of the type (can be blank)
-			"color": "", // Can be a hex color or blank to use the main color
+			"color": "red", // Can be a hex color or blank to use the main color
 			"categoryId": "1111111111111111111", // The category id where the tickets will be created
 			"ticketNameOption": "", // Here is all parameter: USERNAME, USERID, TICKETCOUNT (set to blank to use the default name)
 			"customDescription": "Thank you for your ticket, a staff will reply you as soon as possible\n\n__**What is the reason of the ticket?**__: REASON1", // The custom description of the ticket type, here is all parameter: USERNAME, USERID, TICKETCOUNT, REASON1, 2, ect (set to blank to use the default description)
 			"cantAccess": [], // The roles who can't access to this ticket type
 			"askQuestions": true, // If the bot should ask the reason of the ticket
-			"staffRoles": [], // Category specific staff role (instead of the default ones)
+			"staffRoles": [1236369161878241461], // Category specific staff role (instead of the default ones)
 			"questions": [
 				// Maximum of 5 questions can be set due to discord's limit
 				{
@@ -99,22 +99,22 @@ The configuration should contain
 		"claimButton": true, // Whether to enable ticket claim button or not
 		// The X can be replaced with S (The staff that claimed the ticket) or U (The user that created the ticket)
 		"nameWhenClaimed": "✔️ Ticket-TICKETCOUNT", // Here is all parameter: X_USERNAME, X_USERID, TICKETCOUNT
-		"categoryWhenClaimed": "" // The category the ticket is moved to when claimed
+		"categoryWhenClaimed": "Claimed by Staff" // The category the ticket is moved to when claimed
 	},
 
-	"rolesWhoHaveAccessToTheTickets": ["1111111111111111111", "2222222222222222222"], // Roles who can access to the tickets (Like the staff)/ Treat this as global admin role type of thing.
+	"rolesWhoHaveAccessToTheTickets": ["1236369161878241461", "1236369161878241461"], // Roles who can access to the tickets (Like the staff)/ Treat this as global admin role type of thing.
 
 	"rolesWhoCanNotCreateTickets": [], // Roles who can	not create a tickets (Like a blacklist)
 
 	"pingRoleWhenOpened": true,
-	"roleToPingWhenOpenedId": ["1111111111111111111"], // The role to ping when a ticket is opened
+	"roleToPingWhenOpenedId": ["1236369161878241461"], // The role to ping when a ticket is opened
 
 	"logs": true,
-	"logsChannelId": "1111111111111111111", // The id of the channel where the logs will be sent
+	"logsChannelId": "1236369163740516486", // The id of the channel where the logs will be sent
 	
 	"closeOption": {
 		"closeButton": true, // If false the ticket can be closed only by doing /closes
-		"dmUser": true, // Whether to DM the user when the ticket is closed
+		"dmUser": false, // Whether to DM the user when the ticket is closed
 		"createTranscript": true, // If set to true, when the ticket is closed a transcript will be generated and sent in the logs channel
 		"askReason": true, // If false the ticket will be closed without asking the reason
 		"whoCanCloseTicket": "STAFFONLY", // STAFFONLY (roles configured at "rolesWhoHaveAccessToTheTickets") or EVERYONE
@@ -125,9 +125,9 @@ The configuration should contain
 
 	"status": {
 		"enabled": true, // If you want to enable the status of the bot
-		"text": "github.com/Sayrix", // The text of the status
-		"type": "PLAYING", // PLAYING, WATCHING, LISTENING, STREAMING, COMPETING
-		"url": "https://twitch.tv/grimkujow", // The url of the status if the type is STREAMING (can be blank)
+		"text": "LUREWARE TICKETS", // The text of the status
+		"type": "PLAYING LUREWARE", // PLAYING, WATCHING, LISTENING, STREAMING, COMPETING
+		"url": "", // The url of the status if the type is STREAMING (can be blank)
 		"status": "online" // online, idle, dnd, invisible set to online if the type is STREAMING
 	},
 
